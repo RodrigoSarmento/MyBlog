@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: Teste
+title: Meu Blog
 
 # Your name to show in the footer
 author: Rodrigo Sarmento
@@ -40,7 +40,7 @@ social-network-links:
   email: "rodrigosarmentox@gmail.com"
   facebook: "rodrigo.sarmento.79/"
   github: "RodrigoSarmento"
-  linkedin: "in/rodrigo-sarmento-67297b115/"
+  linkedin: "rodrigo-sarmento-67297b115/"
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
