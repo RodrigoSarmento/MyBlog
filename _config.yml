@@ -57,7 +57,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://www.youtube.com/watch?v=24nHd9Ia81E&ab_channel=Futirinhas"
+url-pretty: "rodrigosarmento.github.io/RodrigoSarmento"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
