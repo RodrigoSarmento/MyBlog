@@ -3,7 +3,7 @@ layout: post
 title: Learning to Code
 subtitle: When I entered a research group
 cover-img: /assets/covers/computer_vision.jpeg
-share-img: /assets/thumbs/love_to_code.jpeg
+share-img: /assets/thumbs/love_to_code.png
 tags: [History]
 readtime: true
 ---
