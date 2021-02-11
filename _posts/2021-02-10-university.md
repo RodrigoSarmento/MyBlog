@@ -2,8 +2,8 @@
 layout: post
 title: Learning to Code
 subtitle: When I entered a research group
-cover-img: /assets/covers/2021_02_10.png
-share-img: /assets/img/path.jpg
+cover-img: /assets/covers/love_to_code.png
+share-img: /assets/img/computer_vision.jpeg
 tags: [History]
 readtime: true
 ---
