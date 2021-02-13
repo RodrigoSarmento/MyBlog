@@ -23,12 +23,11 @@ $ sudo apt-get install clang-format
 # 2º Setting VSCode
 
 Then you need to tell to VSCode to use clang format and search for your file.
-
+Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/print.png">
     <img src="/MyBlog/assets/img/clang/print.png" alt="example">
-    <div style='width: 130px; text-align: center;'>Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)</div>
   </a>
 </div>
 <br />
@@ -38,14 +37,13 @@ Then add those lines to your JSON.
 "C_Cpp.clang_format_style": "file",
 "C_Cpp.clang_format_fallbackStyle": "LLVM",
 ```
-
+<br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/clangSave.png">
     <img src="/MyBlog/assets/img/clang/clangSave.png" alt="example">
-    <div style='width: 130px; text-align: center;'>Example</div>  
   </a>
 </div>
-<br />
+
 The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
 and the second Line will use LLVM If .clang-format is not found.
