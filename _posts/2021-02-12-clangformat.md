@@ -27,14 +27,11 @@ Then you need to tell to VSCode to use clang format and search for your file.
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
 <div style="text-align:center;">
-  <a href="/assets/covers/blue_cover.jpg">
-    <img src="/assets/covers/blue_cover.jpg" alt="travis">
+  <a href="/MyBlog/assets/covers/blue_cover.jpg">
+    <img src="/MyBlog/assets/covers/blue_cover.jpg" alt="travis">
   </a>
 </div>
 
-<div class="youtube-embed-container">
-<iframe src="https://www.youtube-nocookie.com/embed/K4x-uqLl_m4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 Then add those lines to your JSON.
 
@@ -44,8 +41,8 @@ Then add those lines to your JSON.
 ```
 
 <div style="text-align:center;">
-  <a href="/assets/img/clang/clangSave.png">
-    <img src="/assets/img/clang/clangSave.png" alt="travis">
+  <a href="/MyBlog/assets/img/clang/clangSave.png">
+    <img src="/MyBlog/assets/img/clang/clangSave.png" alt="travis">
   </a>
 </div>
 
