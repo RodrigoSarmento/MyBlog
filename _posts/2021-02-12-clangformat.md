@@ -2,8 +2,8 @@
 layout: post
 title: Auto formatting for c++
 subtitle: Three Steps to Setting clang-format On VSCode
-cover-img: /assets/covers/blue_cover.jpeg
-thumbnail-img: /assets/thumbs/c_thumb.png
+cover-img: /assets/covers/blue_cover.jpg
+thumbnail-img: /assets/thumbs/c_thumb.jpg
 share-img: /assets/thumbs/love_to_code.png
 tags: [Tutorial, C++]
 readtime: true
@@ -26,6 +26,9 @@ Then you need to tell to VSCode to use clang format and search for your file.
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
 ![Crepe](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+![Crepe](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+
+("/assets/img/clang/settingsJson.png")
 
 Then add those lines to your JSON.
 
@@ -36,8 +39,7 @@ Then add those lines to your JSON.
 
 ![Crepe](/assets/img/clang/clangSave.png){: .mx-auto.d-block :}
 
-The first line tells VSCode to search for a file named ".clang-format" (You can place this
-file in the project source)
+The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
 and the second Line will use LLVM If .clang-format is not found.
 
@@ -45,7 +47,9 @@ IF you want to test all possible formats without setting a file you can replace 
 
 # 3º Creating File
 
-Here you have tons of possibilities so I'm going to show an example of one the clang-format I use:
+Now you just need to add a file named ".clang-format" in the project source or parent source.
+
+Here you have a lot of possibilities so I'm going to show an example of one of the clang-format I use:
 
 ```
 ---
@@ -161,4 +165,4 @@ UseTab:          Never
 
 You can search for all options here: (https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
-Extra: I recommend to install C/C++ Clang Command Adapter Plugin.
+**Extra: I recommend to install C/C++ Clang Command Adapter Plugin.**
