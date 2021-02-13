@@ -9,7 +9,7 @@ tags: [Tutorial, C++]
 readtime: true
 ---
 
-Here is a simple tutorial if you want to use an auto formatting for c++ in VSCode. We are going to use clang-format to do so.
+Here is a simple tutorial if you want to use an auto-formatting for c++ in VSCode. We are going to use clang-format to do so.
 
 # 1º Install
 
@@ -26,14 +26,10 @@ Then you need to tell to VSCode to use clang format and search for your file.
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
 <div style="text-align:center;">
-  <a href="../assets/img/clang/settingsJson.png">
-    <img src="../assets/img/clang/settingsJson.png" alt="travis">
+  <a href="/assets/img/clang/settingsJson.png">
+    <img src="/assets/img/clang/settingsJson.png" alt="travis">
   </a>
 </div>
-
-![Crepe](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
-
-("/assets/img/clang/settingsJson.png")
 
 Then add those lines to your JSON.
 
@@ -42,13 +38,17 @@ Then add those lines to your JSON.
 "C_Cpp.clang_format_fallbackStyle": "LLVM",
 ```
 
-![Crepe](/assets/img/clang/clangSave.png){: .mx-auto.d-block :}
+<div style="text-align:center;">
+  <a href="/assets/img/clang/clangSave.png">
+    <img src="/assets/img/clang/clangSave.png" alt="travis">
+  </a>
+</div>
 
 The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
 and the second Line will use LLVM If .clang-format is not found.
 
-IF you want to test all possible formats without setting a file you can replace the first line(or the second since you don't have a .clanf-format file) by one of these values: LLVM, Google, Chromium, Mozilla, WebKit, Microsoft and GNU.
+IF you want to test all possible formats without setting a file you can replace the first line(or the second since you don't have a .clanf-format file) with one of these values: LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, and GNU.
 
 # 3º Creating File
 
@@ -170,4 +170,4 @@ UseTab:          Never
 
 You can search for all options here: (https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
-**Extra: I recommend to install C/C++ Clang Command Adapter Plugin.**
+**Extra: I recommend installing C/C++ Clang Command Adapter Plugin.**
