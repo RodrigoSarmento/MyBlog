@@ -28,8 +28,8 @@ Open VSCode pallet(Ctrl + Shift + P) and search for **"Open Settings(JSON)"**.
 
 <br />
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/img/clang/settingsJson.png">
-    <img src="/MyBlog/assets/img/clang/settingsJson.png" alt="example">
+  <a href="/MyBlog/assets/img/clang/print.png">
+    <img src="/MyBlog/assets/img/clang/print.png" alt="example">
   </a>
 </div>
 <br />
