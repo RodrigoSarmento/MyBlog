@@ -13,7 +13,7 @@ Here is a simple tutorial if you want to use an auto-formatting for c++ in VSCod
 
 # 1º Install
 
-make sure you have clang-format installed.
+Make sure you have clang-format installed.
 
 
 ```
@@ -23,7 +23,7 @@ $ sudo apt-get install clang-format
 # 2º Setting VSCode
 
 Then you need to tell to VSCode to use clang format and search for your file.
-Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)
+Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON).
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/print.png">
@@ -31,7 +31,7 @@ Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)
   </a>
 </div>
 <br />
-Then add those lines to your JSON.
+Then add those lines to your JSON:
 
 ```
 "C_Cpp.clang_format_style": "file",
@@ -46,7 +46,7 @@ Then add those lines to your JSON.
 
 The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
-and the second Line will use LLVM If .clang-format is not found.
+The second Line will use LLVM If .clang-format is not found.
 
 IF you want to test all possible formats without setting a file you can replace the first line(or the second since you don't have a .clanf-format file) with one of these values: LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, and GNU.
 
@@ -168,6 +168,6 @@ UseTab:          Never
 ...
 ```
 
- <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">You can search for all options here:</a>
+ <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">You can search for all options here</a>
 
 **Extra: I recommend installing C/C++ Clang Command Adapter Plugin.**
