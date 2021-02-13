@@ -27,9 +27,11 @@ Then you need to tell to VSCode to use clang format and search for your file.
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
 <div style="text-align:center;">
-  <a href="/assets/img/clang/settingsJson.png">
     <img src="/assets/img/clang/settingsJson.png" alt="travis">
-  </a>
+</div>
+
+<div>
+    <img src="/assets/img/clang/settingsJson.png" alt="travis">
 </div>
 
 Then add those lines to your JSON.
@@ -39,10 +41,8 @@ Then add those lines to your JSON.
 "C_Cpp.clang_format_fallbackStyle": "LLVM",
 ```
 
-<div style="text-align:center;">
-  <a href="/assets/img/clang/clangSave.png">
+<div>
     <img src="/assets/img/clang/clangSave.png" alt="travis">
-  </a>
 </div>
 
 
