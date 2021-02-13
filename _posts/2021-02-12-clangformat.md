@@ -15,6 +15,7 @@ Here is a simple tutorial if you want to use an auto-formatting for c++ in VSCod
 
 make sure you have clang-format installed.
 
+
 ```
 $ sudo apt-get install clang-format
 ```
@@ -44,13 +45,15 @@ Then add those lines to your JSON.
   </a>
 </div>
 
+
+
 The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
 and the second Line will use LLVM If .clang-format is not found.
 
 IF you want to test all possible formats without setting a file you can replace the first line(or the second since you don't have a .clanf-format file) with one of these values: LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, and GNU.
 
-# 3º Creating File
+# 3º Creating Clang File
 
 Now you just need to add a file named ".clang-format" in the project source or parent source.
 
