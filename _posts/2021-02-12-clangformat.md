@@ -28,8 +28,8 @@ Open VSCode pallet(Ctrl + Shift + P) and search for **"Open Settings(JSON)"**.
 
 <br />
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/img/clang/settingJson.png">
-    <img src="/MyBlog/assets/img/clang/settingJson.png" alt="travis">
+  <a href="/MyBlog/assets/img/clang/settingsJson.png">
+    <img src="/MyBlog/assets/img/clang/settingsJson.png" alt="example">
   </a>
 </div>
 <br />
@@ -43,7 +43,7 @@ Then add those lines to your JSON.
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/clangSave.png">
-    <img src="/MyBlog/assets/img/clang/clangSave.png" alt="travis">
+    <img src="/MyBlog/assets/img/clang/clangSave.png" alt="example">
   </a>
 </div>
 <br />
@@ -173,6 +173,7 @@ UseTab:          Never
 ...
 ```
 
-You can search for all options here: (https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
+You can search for all options here: <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">
+  </a>
 
 **Extra: I recommend installing C/C++ Clang Command Adapter Plugin.**
