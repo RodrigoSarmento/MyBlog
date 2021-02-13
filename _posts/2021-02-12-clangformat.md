@@ -173,7 +173,11 @@ UseTab:          Never
 ...
 ```
 
-You can search for all options here: <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">
+ <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">You can search for all options here:</a>
+
+You can search for all options here: <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">link text</a>
+
+<a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">
   </a>
 
 **Extra: I recommend installing C/C++ Clang Command Adapter Plugin.**
