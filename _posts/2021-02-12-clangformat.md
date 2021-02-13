@@ -27,8 +27,8 @@ Then you need to tell to VSCode to use clang format and search for your file.
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/covers/blue_cover.jpg">
-    <img src="/MyBlog/assets/covers/blue_cover.jpg" alt="travis">
+  <a href="/MyBlog/assets/covers/settingJson.jpg">
+    <img src="/MyBlog/assets/covers/settingJson.jpg" alt="travis">
   </a>
 </div>
 
@@ -39,6 +39,8 @@ Then add those lines to your JSON.
 "C_Cpp.clang_format_style": "file",
 "C_Cpp.clang_format_fallbackStyle": "LLVM",
 ```
+
+
 
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/clangSave.png">
