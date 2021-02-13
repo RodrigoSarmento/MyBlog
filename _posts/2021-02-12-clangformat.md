@@ -25,7 +25,6 @@ $ sudo apt-get install clang-format
 Then you need to tell to VSCode to use clang format and search for your file.
 
 Open VSCode pallet(Ctrl + Shift + P) and search for **"Open Settings(JSON)"**.
-
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/print.png">
@@ -33,7 +32,6 @@ Open VSCode pallet(Ctrl + Shift + P) and search for **"Open Settings(JSON)"**.
   </a>
 </div>
 <br />
-
 Then add those lines to your JSON.
 
 ```
@@ -47,8 +45,6 @@ Then add those lines to your JSON.
   </a>
 </div>
 <br />
-
-
 The first line tells VSCode to search for a file named ".clang-format" in the project source and parents sources.
 
 and the second Line will use LLVM If .clang-format is not found.
@@ -174,10 +170,5 @@ UseTab:          Never
 ```
 
  <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">You can search for all options here:</a>
-
-You can search for all options here: <a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">link text</a>
-
-<a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">
-  </a>
 
 **Extra: I recommend installing C/C++ Clang Command Adapter Plugin.**
