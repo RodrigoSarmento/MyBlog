@@ -25,11 +25,11 @@ Then you need to tell to VSCode to use clang format and search for your file.
 
 Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".
 
-![Tag](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
-[Tags](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
-![Tags](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
-[Tag](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
-![Image](/assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+![Tag](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+[Tags](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+![Tags](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+[Tag](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
+![Image](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
 
 ![Crepe](../assets/img/clang/settingsJson.png){: .mx-auto.d-block :}
 
