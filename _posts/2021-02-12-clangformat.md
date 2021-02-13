@@ -24,11 +24,11 @@ $ sudo apt-get install clang-format
 
 Then you need to tell to VSCode to use clang format and search for your file.
 
-Open VSCode pallet(Ctrl + Shift + P) and search for **"Open Settings(JSON)"**.
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/print.png">
     <img src="/MyBlog/assets/img/clang/print.png" alt="example">
+    <figcaption>Open VSCode pallet(Ctrl + Shift + P) and search for "Open Settings(JSON)".</figcaption>
   </a>
 </div>
 <br />
@@ -38,10 +38,10 @@ Then add those lines to your JSON.
 "C_Cpp.clang_format_style": "file",
 "C_Cpp.clang_format_fallbackStyle": "LLVM",
 ```
-<br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/clang/clangSave.png">
     <img src="/MyBlog/assets/img/clang/clangSave.png" alt="example">
+    <figcaption>Example".</figcaption>
   </a>
 </div>
 <br />
