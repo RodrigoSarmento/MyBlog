@@ -4,7 +4,7 @@ title: First Version of SLAM Solver Test
 subtitle: A description of one of the projects I'm working on
 cover-img: /assets/img/slam_solver_test/slam_solver_end.png
 thumbnail-img: /assets/img/slam_solver_test/slam_solver_end.png
-share-img: /assets/thumbs/love_to_code.png
+share-img: /assets/img/slam_solver_test/slam_solver_end.png
 tags: [C++, Computer Vision, Aruco]
 readtime: true
 ---
