@@ -2,8 +2,8 @@
 layout: post
 title: First Version of SLAM Solver Test
 subtitle: A description of one of the projects I'm working on
-cover-img: /assets/img/slam_solver_end.png
-thumbnail-img: /assets/img/slam_solver_end.png
+cover-img: /assets/img/slam_solver_test/slam_solver_end.png
+thumbnail-img: /assets/img/slam_solver_test/slam_solver_end.png
 share-img: /assets/thumbs/love_to_code.png
 tags: [C++, Computer Vision, Aruco]
 readtime: true
@@ -56,7 +56,7 @@ There are a lot of steps here and they are not that easy to explain but I'm goin
 # Example running
 
 Now to the action, in the video below you can see how it works. I'm going to explain some steps that are happening in the video.
-<iframe width="420" height="315"
+<iframe width="840" height="600"
 src="https://www.youtube.com/embed/esQundkMeLU">
 </iframe>
 
