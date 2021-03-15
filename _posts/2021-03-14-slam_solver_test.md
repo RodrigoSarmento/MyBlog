@@ -70,9 +70,7 @@ On the left, we have the KeyFrames added with the 3d Axis, the blue arrows are t
 </div>
 <br />
 
-
 Here we have some time that the camera has not seen the Aruco marker, so the new KeyFrame we added is a KeyFrame given by the motion estimation and does not have a red arrow.
-
 
 <br />
 <div style="text-align:center;">
@@ -81,7 +79,6 @@ Here we have some time that the camera has not seen the Aruco marker, so the new
   </a>
 </div>
 <br />
-
 
 Here we have a live optimization, the pink arrows are the blue arrows optimized, this is, the new pose of those KeyFrames. To be fair, there are some problems with the KeyFrames optimization after the time the algorithm was not seeing the Aruco Marker. We still need further examination to know what is making those wrong optimized poses.  
 
@@ -92,11 +89,7 @@ Here we have a live optimization, the pink arrows are the blue arrows optimized,
   </a>
 </div>
 <br />
-
-
 And this is the final result.
-
-
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/slam_solver_test/slam_solver_end.png">
