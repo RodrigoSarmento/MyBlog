@@ -31,7 +31,7 @@ There are a lot of steps here and they are not that easy to explain but I'm goin
 
 ### Tracking features: 
 
-  Every pixel in the image has a 3d depth position, a 2d pixel position, and a color, with this we can keep track of a feature and calculate the amount of motion of our camera by the amount of motion of the features in the scene. Let's say that in the **sequence of image 1** we found a feature and in the **sequence of image 2** we found this same feature again, but know the position of the feature has changed, with this we know that our camera has moved in the scene(we are assuming that the features are not moving) and we can calculate the camera motion between two images. 
+  Every pixel in the image has a 3d depth position, a 2d pixel position, and a color, with this we can keep track of a feature and calculate the amount of motion of our camera by the amount of motion of the features in the scene. Let's say that in the **image 1** we found a feature and in the **image 2** we found this same feature again, but know the position of the feature has changed, with this we know that our camera has moved in the scene(we are assuming that the features are not moving) and we can calculate the camera motion between two images. 
   Of course that there a lot more involved, we have to keep tracking a lot of features and matching with previous features found, there is the calibration of camera involve, optimization, and a lot more, this is only a scratch of the whole. 
 
   The image below shows the motion of the **KeyFrames**(I'm still going to explain this), the really small blue dot is the previous position, the big blue dot is the actual position and the blue line is the motion.
