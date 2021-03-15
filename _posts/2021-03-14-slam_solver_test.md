@@ -57,7 +57,7 @@ There are a lot of steps here and they are not that easy to explain but I'm goin
 
 Now to the action, in the video below you can see how it works. I'm going to explain some steps that are happening in the video.
 <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=esQundkMeLU&ab_channel=SarmentoScience">
+src="https://www.youtube.com/embed/esQundkMeLU">
 </iframe>
 
 On the left, we have the KeyFrames added with the 3d Axis, the blue arrows are the edges that go from Keyframe N-1 to N, the red arrows are the edges that go from the actual Keyframe to the first one(This one we call a loop closure edge).
