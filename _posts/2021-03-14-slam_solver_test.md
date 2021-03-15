@@ -17,7 +17,7 @@ First of all, what is SLAM? SLAM is an acronym for Simultaneous Localization and
 
 There are a lot of steps here and they are not that easy to explain but I'm going to give my best.
 
-## Detect Features in the image: 
+### Detect Features in the image: 
 
   First of all, we have to detect some features in the image and track its position, we call features, pixels in the image that contrast with the rest of the image, there is an example below showing those features(marked as blue dots), so we have a lot of features in the objects above the black table because they contrast with the black environment around them.
 
@@ -29,9 +29,9 @@ There are a lot of steps here and they are not that easy to explain but I'm goin
 </div>
 <br />
 
-## Tracking features: 
+### Tracking features: 
 
-  Every pixel in the image has a 3d depth position, a 2d pixel position, and a color, with this we can keep track of a feature and calculate the amount of motion of our camera by the amount of motion of the features in the scene. Let's say that in the ```sequence of image 1``` we found a feature and in the ```sequence of image 2``` we found this same feature again, but know the position of the feature has changed, with this we know that our camera has moved in the scene(we are assuming that the features are not moving) and we can calculate the camera motion between two images. 
+  Every pixel in the image has a 3d depth position, a 2d pixel position, and a color, with this we can keep track of a feature and calculate the amount of motion of our camera by the amount of motion of the features in the scene. Let's say that in the *sequence of image 1* we found a feature and in the *sequence of image 2* we found this same feature again, but know the position of the feature has changed, with this we know that our camera has moved in the scene(we are assuming that the features are not moving) and we can calculate the camera motion between two images. 
   Of course that there a lot more involved, we have to keep tracking a lot of features and matching with previous features found, there is the calibration of camera involve, optimization, and a lot more, this is only a scratch of the whole. 
 
   The image below shows the motion of the KeyFrames, the really small blue dot is the previous position, the big blue dot is the actual position and the blue line is the motion.
@@ -44,16 +44,16 @@ There are a lot of steps here and they are not that easy to explain but I'm goin
 </div>
 <br />
 
-## Aruco Marker:
+### Aruco Marker:
   The concept is the same as the features in the image, except that the Aruco markers are an already known feature. We need to say to the algorithm to look forward Aruco markers, and we also say the size of the markers, this makes it much easier to calculate the Camera Position. <a href="https://docs.opencv.org/master/d5/dae/tutorial_aruco_detection.html">Here is everything you need to know if you want to start using Aruco(highly recommended)</a> 
 
-## Keyframes:
+### Keyframes:
 
   Our main goal here is to create a graph of camera poses that we can optimize, but it is not smart to just add all camera poses, because there will be a lot of redundances, so we just want to add poses that give good and new information, those poses we call KeyFrame.
   We have two different KeyFrames, the first one is when we are seeing a lot of new features in the scene, this says to us that we are moving to a new place, the second one is when We are sure that we are seeing something that we already know what is, this can happen when the camera goes back to someplace it was before, or when we find an Aruco maker.
   With this Graph of KeyFrames poses we can make a live optimization of the camera pose and keep track of camera pose history.
 
-# 2º Example running
+# Example running
 
 Now to the action, in the video below you can see how it works. I'm going to explain some steps that are happening in the video.
 <iframe width="420" height="315"
