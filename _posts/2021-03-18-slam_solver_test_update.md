@@ -11,13 +11,13 @@ readtime: true
 
 # Last Post
 
-In the previous post <a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test/">
+In the previous post <a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test/">Here</a> 
 where I introduced the slam solver project I make it clear that we could improve a lot, and here is the first improvement. If you are new to SLAM I recommend you to see the last post where I introduce some concepts.
 
 # What have Changed
 
 Two things have changed that improved the optimization and detection of KeyFrames.
-The main thing was changing the algorithm tracker, now I'm using an implementation of a friend of mine made <a href="https://www.linkedin.com/in/marcos-henrique-fernandes-marcone/">, using ORB-SLAM as a base, this tracker has more accurate features and thus allows me to produce more KeyFrames with less amount of motion.
+The main thing was changing the algorithm tracker, now I'm using an implementation of a friend of mine made <a href="https://www.linkedin.com/in/marcos-henrique-fernandes-marcone/">(His Linkedin)</a> , using ORB-SLAM as a base, this tracker has more accurate features and thus allows me to produce more KeyFrames with less amount of motion.
 The second thing was a little change in how the algorithm adds a KeyFrame, previously I had only one restriction to add a KeyFrame to the graph, the distance between the last KeyFrame, but this can leads to add a lot of KeyFrame of only one class(odometry or loop closure), so now the restriction is based in the distance between the last KeyFrame of the same "class".
 
 ### Results and discussion
