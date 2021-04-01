@@ -116,3 +116,9 @@ Here is the result with the given Input for P1 and P2: 50 80 100 200
 </div>
 <br />
 
+# Question 2.2
+
+This question asks to switch quadrants of a image this way
+
+1 2         Will Be         4 3
+3 4                         2 1
