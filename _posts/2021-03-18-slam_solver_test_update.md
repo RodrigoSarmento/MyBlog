@@ -1,107 +1,63 @@
 ---
 layout: post
-title: DIP Exercises
-subtitle: Some exercises from my university
-cover-img: /assets/covvers/cover_pdi.png
-thumbnail-img: /assets/thumbs/thumb_pdi.png
-share-img: /assets/thumbs/thumb_pdi.png
-tags: [C++, Computer Vision, Exercises, Tutorials]
+title: Update of Slam Solver Test
+subtitle: A new tracker
+cover-img: /assets/img/slam_solver_test/slam_solver_update_3.png
+thumbnail-img: /assets/img/slam_solver_test/slam_solver_update_1.png
+share-img: /assets/img/slam_solver_test/slam_solver_update_1.png
+tags: [C++, Computer Vision, Aruco]
 readtime: true
 ---
 
-# REPO
+# Last Post
 
-The code is available in this repository <a href="https://github.com/RodrigoSarmento/ListasPDI">(repository)</a>
+In the previous post <a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test/">Here</a> 
+where I introduced the slam solver project I make it clear that we could improve a lot, and here is the first improvement. If you are new to SLAM I recommend you to see the last post where I introduce some concepts.
 
-# Question 2.1
+# What have Changed
 
-Is asked to create a program that creates a negative region in Image given two points P1 and P2 that forms a rectangle.
+Two things have changed that improved the optimization and detection of KeyFrames.
+The main thing was changing the algorithm tracker, now I'm using an implementation of a friend of mine made <a href="https://www.linkedin.com/in/marcos-henrique-fernandes-marcone/">(His Linkedin)</a> , using ORB-SLAM as a base, this tracker has more accurate features and thus allows me to produce more KeyFrames with less amount of motion.
+The second thing was a little change in how the algorithm adds a KeyFrame, previously I had only one restriction to add a KeyFrame to the graph, the distance between the last KeyFrame, but this can leads to add a lot of KeyFrame of only one class(odometry or loop closure), so now the restriction is based in the distance between the last KeyFrame of the same "class".
 
-Here is the code:
+### Results and discussion
 
-```
-#include <config_loader.h>
-#include <iostream>
-#include <opencv2/opencv.hpp>
-#include <string>
+Below there is a video showing the changes, and I'm going to split this into three things.
 
-using namespace cv;
-using namespace std;
+<iframe width="840" height="600"
+src="https://www.youtube.com/embed/476-7_mJKEc">
+</iframe>
 
-int main(int argc, char* argv[])
-{
+In the below image you can see in the left that some features are "floating" in the image and there are some features in places without texture, such as the white wall, those are some older features that have not been tracked right or have not been thrown away when they should, the image in the right shows the new features that are better placed.
 
-    Mat image;
-    Vec3b val;
-    string image_file;
+<br />
+<div style="text-align:center;">
+  <a href="/MyBlog/assets/img/slam_solver_test/slam_solver_update_1.png">
+    <img src="/MyBlog/assets/img/slam_solver_test/slam_solver_update_1.png" alt="example">
+  </a>
+</div>
+<br />
 
-    int p1_x, p2_x, p1_y, p2_y;
+Here you can see the difference between the amount of KeyFrames the older tracker created when it was not seeing the Aruco Marker(only one), and with the new tracker, we have a lot of Odometry poses(the poses that don't have a red arrow connecting to the origin). This decreases the amount of accumulated error between poses.
 
-    if (argc != 6) {
-        printf("Couldn't load all parameter, use example of use: ./2_2regioes config_file p1_x p1_y p2_x p2_y\n");
-        return 0;
-    }
+<br />
+<div style="text-align:center;">
+  <a href="/MyBlog/assets/img/slam_solver_test/slam_solver_update_2.png">
+    <img src="/MyBlog/assets/img/slam_solver_test/slam_solver_update_2.png" alt="example">
+  </a>
+</div>
+<br />
 
-    ConfigLoader param_loader(argv[1]);
+And finally, the optimization, one of the things I talked about in the last post was the wrong optimization of poses when the algorithm was not seeing the Aruco Marker, this created a lot of error since there was a huge gap between the two poses. Now when the algorithm is not seeing the Aruco Marker the new tracker can still handle the calculation of those poses by itself, given more data to the optimizer algorithm and resulting in better optimization.
 
-    p1_x = atoi(argv[2]);
-    p1_y = atoi(argv[3]);
-    p2_x = atoi(argv[4]);
-    p2_y = atoi(argv[5]);
-    param_loader.checkAndGetString("q2_image", image_file);
+<br />
+<div style="text-align:center;">
+  <a href="/MyBlog/assets/img/slam_solver_test/slam_solver_update_3.png">
+    <img src="/MyBlog/assets/img/slam_solver_test/slam_solver_update_3.png" alt="example">
+  </a>
+</div>
+<br />
 
-    image = imread(image_file, IMREAD_COLOR);
-    if (!image.data) cout << "Couldn't open image" << image_file << endl;
+# Next Steps
 
-    for (int i = p1_x; i < p2_x; i++) {
-        for (int j = p1_y; j < p2_y; j++) {
-            val[0] = 255 - image.at<Vec3b>(i, j)[0];
-            val[1] = 255 - image.at<Vec3b>(i, j)[1];
-            val[2] = 255 - image.at<Vec3b>(i, j)[2];
-            image.at<Vec3b>(i, j) = val;
-        }
-    }
-
-    imshow("image", image);
-    waitKey();
-    return 0;
-}
-```
-Here we read the parameters from the user and load the image.
-
-ConfigLoader is just a implementation I use to keep some parameters, what matters here is that ConfigLoader will
-read a string from a file that is the path of our image.
-
-
-```
-    if (argc != 6) {
-        printf("Couldn't load all parameter, use example of use: ./2_2regioes config_file p1_x p1_y p2_x p2_y\n");
-        return 0;
-    }
-
-    ConfigLoader param_loader(argv[1]);
-
-    p1_x = atoi(argv[2]);
-    p1_y = atoi(argv[3]);
-    p2_x = atoi(argv[4]);
-    p2_y = atoi(argv[5]);
-    param_loader.checkAndGetString("q2_image", image_file);
-
-    image = imread(image_file, IMREAD_COLOR);
-    if (!image.data) cout << "Couldn't open image" << image_file << endl;
-
-```
-
-The main thing is here, let's iterate over the rectangle region of the image and subtract 255 from every pixel to create the Negative effect.
-
-```
-for (int i = p1_x; i < p2_x; i++) {
-        for (int j = p1_y; j < p2_y; j++) {
-            val[0] = 255 - image.at<Vec3b>(i, j)[0];
-            val[1] = 255 - image.at<Vec3b>(i, j)[1];
-            val[2] = 255 - image.at<Vec3b>(i, j)[2];
-            image.at<Vec3b>(i, j) = val;
-        }
-    }
-```
-
+The result for this example is good for now and I'm going to change my focus to another problem. The next problem I'm going to try to solve is the error accumulation in a known environment, my approach is to make a local optimization when the camera is seeing multiple markers, hopefully, this will calculate a new Camera pose every time this optimization is made reducing the error accumulation during the process. 
