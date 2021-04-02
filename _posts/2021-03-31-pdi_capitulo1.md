@@ -25,8 +25,7 @@ The image used as input in both programs is
 </div>
 <br />
 
-Is asked to create a program that creates a negative region in Image given two points P1 and P2 that forms a rectangle.
-
+Is asked to create a program that creates a negative region in the Image given two points P1 and P2 that form a rectangle.
 Here is the code:
 
 ```
@@ -77,11 +76,11 @@ int main(int argc, char* argv[])
     return 0;
 }
 ```
+
 Here we read the parameters from the user and load the image.
 
-ConfigLoader is just a implementation I use to keep some parameters, what matters here is that ConfigLoader will
+ConfigLoader is just an implementation I use to keep some parameters, what matters here is that ConfigLoader will
 read a string from a file that is the path of our image.
-
 
 ```
     if (argc != 6) {
@@ -128,7 +127,7 @@ Here is the result with the given Input for P1 and P2: 50 80 100 200
 
 # Question 2.2
 
-This question asks to switch quadrants of a image this way
+This question asks to switch quadrants of an image this way.
 
 <br />
 <div style="text-align:center;">
@@ -139,7 +138,7 @@ This question asks to switch quadrants of a image this way
 <br />
 
 
-The code is show below:
+The code is shown below:
 
 ```
 #include <config_loader.h>
@@ -187,7 +186,7 @@ int main(int argc, char* argv[])
     return 0;
 }
 ```
-The main Idea here is pretty simple, I just divided the image in 4 quadrants and saved those images(First four lines). Then I created a new image to be the final output, that has the size of the input image, and I inserted the quadrants in the order desired.
+The main idea here is pretty simple, I just divided the image into 4 quadrants and saved those images(The first four lines). Then I created a new image to be the final output, that has the size of the input image, and I inserted the quadrants in the order desired.
 
 ```
     Mat image_quad_1(image, Range(0, image.rows / 2), Range(0, image.cols / 2));
@@ -215,7 +214,7 @@ and the result is:
 
 # Question 3
 
-This question asks to find and count the number of "bubbles" with and without hole, the image below is used as example.
+This question asks to find and count the number of "bubbles" with and without holes, the image below is used as an example.
 
 <br />
 <div style="text-align:center;">
@@ -225,7 +224,7 @@ This question asks to find and count the number of "bubbles" with and without ho
 </div>
 <br />
 
-We can see that there is a black background and some white bubbles, in this example tha background color is 0 and the bubble color is 255. Finally, all the bubbles that touches the edge of the image should be removed. So here is the final code.
+We can see that there are a black background and some white bubbles, in this example, the background color is 0 and the bubble color is 255. Finally, all the bubbles that touch the edge of the image should be removed. So here is the final code.
 
 To count the bubbles we search in the image for a white pixel, if we find we use the FloodFill algorithm to paint the object as black.
 Here you can see more details about<a href="https://en.wikipedia.org/wiki/Flood_fill">FloodFill.</a>
@@ -356,7 +355,7 @@ void cleanEdges(Mat& image, int width, int height)
     }
 }
 ```
-    The first thing I do is remove all bubbles that touches the edge. This sure is not the best implementation to do this but was the first I had in mind. So here I'm searching for white pixels in the borders and using floodfill to paint it with Black.
+    The first thing I do is remove all bubbles that touch the edge. This sure is not the best implementation to do this but was the first I had in mind. So here I'm searching for white pixels in the borders and using flood fill to paint it with Black.
 
 ```
 void cleanEdges(Mat& image, int width, int height)
@@ -396,7 +395,7 @@ void cleanEdges(Mat& image, int width, int height)
 }
 ```
 
-Then I detect the bubbles and I paint as gray(just for visualization), after this step I have all the bubbles with or without a hole in the image.
+Then I detect the bubbles and I paint them as gray(just for visualization), after this step I have all the bubbles with or without a hole in the image.
 
 ```
     // Detecting all bubles in image and using floodfill to paint as gray
@@ -419,7 +418,7 @@ Then I detect the bubbles and I paint as gray(just for visualization), after thi
 
 
 Here is the output from the first step. After that I'm going to inverting the colors, the result of inverting the colors will make 
-the image all white but all holes in the image will be paint as black, so now we can search for black pixels to count the holes.
+the image all white but all holes in the image will be painted as black, so now we can search for black pixels to count the holes.
 
 <br />
 <div style="text-align:center;">
@@ -452,8 +451,7 @@ the image all white but all holes in the image will be paint as black, so now we
         }
     }
 ```
-    
-    Finally, I have the number of bubbles and the number of bubbles with hole, So I just need to subtract the number of total with the number of bubbles with hole to find the number of bubbles without hole.
+    Finally, I have the number of bubbles and the number of bubbles with hole, So I just need to subtract the number of the total with the number of bubbles with a hole to find the number of bubbles without a hole.
 
 ```
    cout << "The image has " << nobjects_with_holes << " bubbles with holes\n";
@@ -462,7 +460,7 @@ the image all white but all holes in the image will be paint as black, so now we
 
 # Question 4.1
 
-In this question have to implement a histogram equalization in a video. Below there is two videos, the first one is the input video in gray scale and the second one is the output after histogram equalization. There isn't much to talk about this code, first there is a calculation of the histogram image and it is shown in image, and later the equalizeHist function of opencv equalizes the histogram of a grayscale image.
+In this question have to implement a histogram equalization in a video. Below there are two videos, the first one is the input video in grayscale and the second one is the output after histogram equalization. There isn't much to talk about in this code, first, there is a calculation of the histogram image and it is shown in the image, and later the equalizeHist function of OpenCV equalizes the histogram of a grayscale image.
 
 <iframe width="840" height="600"
 src="https://www.youtube.com/embed/476-7_mJKEc">
@@ -560,7 +558,7 @@ int main(int argc, char* argv[])
 
 # Question 4.2
 
-This question asks for a motionDetector based in the histogram of the image. Below is the full code.
+This question asks for a motionDetector based on the histogram of the image. Below is the full code.
 
 ```
 #include <config_loader.h>
@@ -688,7 +686,7 @@ void motionDetector(Mat hist, Mat& previouslyHist, int& motion_detection_count)
 }
 ```
 
-The histogram vector beans of the previously image is saved, and compared with the actual histogram image, for each bean I count if the difference is higher then 1, and if there is 16 beans(25%) that are different from the previously histogram I considere as a motion detection. Those parameters are totally arbitrary, below is the video showing the motion detection, and you can see that when the image is not moving, or moving slowly the motion detection is not triggered.
+The histogram vector beans of the previous image are saved, and compared with the actual histogram image, for each bean, I count if the difference is higher than 1, and if there are 16 beans(25%) that are different from the previously histogram I consider as motion detection. Those parameters are arbitrary, below is the video showing the motion detection, and you can see that when the image is not moving or moving slowly the motion detection is not triggered.
 
 
 <iframe width="840" height="600"
@@ -697,7 +695,8 @@ src="https://www.youtube.com/embed/gK2wAXdiEvk">
 
 # Question 5
 
-This questions asks for a Gauss Laplacian Filter, the program below was used as based
+This question asks for a Gauss Laplacian Filter, the program below was used based.
+
 ```
 
 #include <config_loader.h>
@@ -807,8 +806,7 @@ int main(int argc, char* argv[])
 
 # Question 6
 
-This question asks for a focus simulation. 
-We use this function to select the region of blur.
+This question asks for a focus simulation. We use this function to create the filter.
 
 <br />
 <div style="text-align:center;">
@@ -953,7 +951,7 @@ Here is the program working without a region define, so the image is all blur.
 </div>
 <br />
 
-And here is the image when focusing in the stadium with 0 decay, you can see that there is a line separating the focused image and the blur image right above and below the stadium, creating a bad transition.
+And here is the image when focusing in the stadium with 0 decay, you can see that there is a line separating the focused image and the blurred image right above and below the stadium, creating a bad transition.
 
 <br />
 <div style="text-align:center;">
