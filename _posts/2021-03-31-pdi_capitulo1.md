@@ -956,7 +956,7 @@ And here is the image when focusing in the stadium with 0 decay, you can see tha
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/pdi/blur_0decay.png">
-    <img src="/MyBlog/assets/img/pdi/blur.png" alt="example">
+    <img src="/MyBlog/assets/img/pdi/blur_0decay.png" alt="example">
   </a>
 </div>
 <br />
@@ -966,7 +966,7 @@ And here we can see the same region but using 100 decay, creating a smooth trans
 <br />
 <div style="text-align:center;">
   <a href="/MyBlog/assets/img/pdi/blur_100decay.png">
-    <img src="/MyBlog/assets/img/pdi/blur.png" alt="example">
+    <img src="/MyBlog/assets/img/pdi/blur_100decay.png" alt="example">
   </a>
 </div>
 <br />
