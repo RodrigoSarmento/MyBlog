@@ -2,9 +2,9 @@
 layout: post
 title: DIP Exercises
 subtitle: Some exercises from my university
-cover-img: /assets/covers/cover_pdi.png
+cover-img: /assets/img/pdi/blur_100decay.png
 thumbnail-img: /assets/thumbs/thumb_pdi.png
-share-img: /assets/thumbs/thumb_pdi.png
+share-img:  /assets/img/pdi/blur_100decay.png
 tags: [C++, Computer Vision, Exercises, Tutorials]
 readtime: true
 ---
