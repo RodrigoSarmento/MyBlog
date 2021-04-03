@@ -225,7 +225,7 @@ This question asks to find and count the number of "bubbles" with and without ho
 We can see that there are a black background and some white bubbles, in this example, the background color is 0 and the bubble color is 255. Finally, all the bubbles that touch the edge of the image should be removed. So here is the final code.
 
 To count the bubbles we search in the image for a white pixel, if we find we use the FloodFill algorithm to paint the object as black.
-Here you can see more details about<a href="https://en.wikipedia.org/wiki/Flood_fill">FloodFill.</a>
+Here you can see more details about<a href="https://en.wikipedia.org/wiki/Flood_fill"> FloodFill.</a>
 
 ```
 #include <config_loader.h>
