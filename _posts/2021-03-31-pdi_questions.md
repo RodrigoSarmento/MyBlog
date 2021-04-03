@@ -114,8 +114,7 @@ for (int i = p1_x; i < p2_x; i++) {
     }
 ```
 
-Here is the result with the given Input for P1 and P2: 50 80 100 200
-
+Here is the result with the given Input for P1 and P2: 50 80 100 200.
 
 <br />
 <div style="text-align:center;">
@@ -136,7 +135,6 @@ This question asks to switch quadrants of an image this way.
   </a>
 </div>
 <br />
-
 
 The code is shown below:
 
@@ -202,7 +200,7 @@ The main idea here is pretty simple, I just divided the image into 4 quadrants a
     image_quad_1.copyTo(final_image(Range(image.rows / 2, image.rows), Range(image.cols / 2, image.cols)));
 ```
 
-and the result is:
+And the result is:
 
 <br />
 <div style="text-align:center;">
