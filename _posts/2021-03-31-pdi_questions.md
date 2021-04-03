@@ -355,7 +355,9 @@ void cleanEdges(Mat& image, int width, int height)
     }
 }
 ```
-    The first thing I do is remove all bubbles that touch the edge. This sure is not the best implementation to do this but was the first I had in mind. So here I'm searching for white pixels in the borders and using flood fill to paint it with Black.
+
+The first thing I do is remove all bubbles that touch the edge. This sure is not the best implementation to do this but was the first I had in mind. So here I'm searching for white pixels in the borders and using flood fill to paint it with Black.
+
 
 ```
 void cleanEdges(Mat& image, int width, int height)
