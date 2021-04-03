@@ -1263,7 +1263,7 @@ int main(int argc, char* argv[])
 
 To create a better image with circles it is asked to use the canny edge detector as a reference to improve the image quality. Here I follow this logic.
 
-*** First: *** Paint big circles in the image with a big step between circles.
+**First:** Paint big circles in the image with a big step between circles.
 
 <br />
 <div style="text-align:center;">
@@ -1273,7 +1273,7 @@ To create a better image with circles it is asked to use the canny edge detector
 </div>
 <br />
 
-*** Second: *** Use canny with a high Threshold to detect just the high contrast edges, then iterate over this image, and for all edges found paint another circle(50% smaller than the previously one).
+**Second:** Use canny with a high Threshold to detect just the high contrast edges, then iterate over this image, and for all edges found paint another circle(50% smaller than the previously one).
 
 <br />
 <div style="text-align:center;">
@@ -1283,7 +1283,7 @@ To create a better image with circles it is asked to use the canny edge detector
 </div>
 <br />
 
-*** Third: *** Same as before, but using a lower Threshold for detect edges and paint again a smaller circle.
+**Third:** Same as before, but using a lower Threshold for detect edges and paint again a smaller circle.
 
 <br />
 <div style="text-align:center;">
