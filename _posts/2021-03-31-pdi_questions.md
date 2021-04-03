@@ -463,11 +463,11 @@ the image all white but all holes in the image will be painted as black, so now 
 In this question have to implement a histogram equalization in a video. Below there are two videos, the first one is the input video in grayscale and the second one is the output after histogram equalization. There isn't much to talk about in this code, first, there is a calculation of the histogram image and it is shown in the image, and later the equalizeHist function of OpenCV equalizes the histogram of a grayscale image.
 
 <iframe width="840" height="600"
-src="https://www.youtube.com/embed/476-7_mJKEc">
+src="https://www.youtube.com/embed/L3xrARS64jE">
 </iframe>
 
 <iframe width="840" height="600"
-src="https://www.youtube.com/embed/L3xrARS64jE">
+src="https://www.youtube.com/embed/VRYlzQUkoYY">
 </iframe>
 
 Here is the code:
@@ -686,7 +686,8 @@ void motionDetector(Mat hist, Mat& previouslyHist, int& motion_detection_count)
 }
 ```
 
-The histogram vector beans of the previous image are saved, and compared with the actual histogram image, for each bean, I count if the difference is higher than 1, and if there are 16 beans(25%) that are different from the previously histogram I consider as motion detection. Those parameters are arbitrary, below is the video showing the motion detection, and you can see that when the image is not moving or moving slowly the motion detection is not triggered.
+The histogram vector beans of the previous image are saved, and compared with the actual histogram image, for each bean, I count if the difference is higher than 1, and if there are 16 beans(25%) that are different from the previously histogram I consider as motion detection. 
+Those parameters are arbitrary, below is the video showing the motion detection, and you can see that when the image is not moving or moving slowly the motion detection is not triggered.
 
 
 <iframe width="840" height="600"
@@ -815,7 +816,7 @@ float laplacian_gauss[] = {0, 0, -1, 0, 0,
 
 ```
 
-And here is the result using laplacian_gauss:
+And here is the result using laplacian_gauss.
 
 <br />
 <div style="text-align:center;">
@@ -837,7 +838,7 @@ This question asks for a focus simulation. We use this function to create the fi
 </div>
 <br />
 
-Below is the code and the input image.
+Below is the input image and the code.
 
 <br />
 <div style="text-align:center;">
