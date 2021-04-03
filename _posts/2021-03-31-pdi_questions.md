@@ -428,8 +428,11 @@ the image all white but all holes in the image will be painted as black, so now 
 </div>
 <br />
 
+Finally, I have the number of bubbles and the number of bubbles with hole, So I just need to subtract the number of the total with the number of bubbles with a hole to find the number of bubbles without a hole.
+
 
 ```
+
   // Inverting the color, now the black background will be white
     floodFill(image, Point(0, 0), 255);
     imshow("image", image);
@@ -450,14 +453,10 @@ the image all white but all holes in the image will be painted as black, so now 
             }
         }
     }
-```
 
-Finally, I have the number of bubbles and the number of bubbles with hole, So I just need to subtract the number of the total with the number of bubbles with a hole to find the number of bubbles without a hole.
-
-
-```
    cout << "The image has " << nobjects_with_holes << " bubbles with holes\n";
    cout << "The image has " << nobjects - nobjects_with_holes << " bubbles without holes\n";
+
 ```
 
 # Question 4.1
