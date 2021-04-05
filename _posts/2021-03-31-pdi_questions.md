@@ -1304,9 +1304,12 @@ This questions asks to use Kmeans with random center and only one attemp to chan
 ```
 #include <config_loader.h>
 #include <cstdlib>
+#include <iostream>
 #include <opencv2/opencv.hpp>
+#include <string>
 
 using namespace cv;
+using namespace std;
 
 int main(int argc, char* argv[])
 {
@@ -1315,6 +1318,7 @@ int main(int argc, char* argv[])
     int nRodadas = 1;
     Mat centros;
     string image_file;
+    string result_file;
 
     if (argc != 2) {
         printf("Couldn't load all parameter, use example of use: ./8_canny.cpp config_file p1_x p1_y p2_x p2_y\n");
@@ -1353,7 +1357,8 @@ int main(int argc, char* argv[])
             }
         }
         imshow("clustered image", rotulada);
-        imwrite("kmeans_result.jpg", rotulada);
+        result_file = "kmeans_result" + to_string(i) + ".png";
+        imwrite(result_file, rotulada);
         waitKey(0);
     }
 }
