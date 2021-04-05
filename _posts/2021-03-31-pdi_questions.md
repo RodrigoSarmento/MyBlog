@@ -15,7 +15,9 @@ The code is available in this repository <a href="https://github.com/RodrigoSarm
 
 # Question 2.1
 
-The image used as input in both programs is 
+**Create a program that receives an image and two points P1 and P2 that forms a rectangle as input and as result transform the rectangle to negative.**
+
+The image used as input in both programs is.
 
 <br />
 <div style="text-align:center;">
@@ -25,8 +27,7 @@ The image used as input in both programs is
 </div>
 <br />
 
-Is asked to create a program that creates a negative region in the Image given two points P1 and P2 that form a rectangle.
-Here is the code:
+and the code.
 
 ```
 #include <config_loader.h>
@@ -126,7 +127,7 @@ Here is the result with the given Input for P1 and P2: 50 80 100 200.
 
 # Question 2.2
 
-This question asks to switch quadrants of an image this way.
+**Switch quadrants of an image this way**
 
 <br />
 <div style="text-align:center;">
@@ -136,7 +137,7 @@ This question asks to switch quadrants of an image this way.
 </div>
 <br />
 
-The code is shown below:
+The code is shown below.
 
 ```
 #include <config_loader.h>
@@ -212,7 +213,7 @@ And the result is:
 
 # Question 3
 
-This question asks to find and count the number of "bubbles" with and without holes, the image below is used as an example.
+**Find and count the number of "bubbles" with and without holes in the given image.**
 
 <br />
 <div style="text-align:center;">
@@ -461,7 +462,9 @@ Finally, I have the number of bubbles and the number of bubbles with hole, So I 
 
 # Question 4.1
 
-In this question have to implement a histogram equalization in a video. Below there are two videos, the first one is the input video in grayscale and the second one is the output after histogram equalization. There isn't much to talk about in this code, first, there is a calculation of the histogram image and it is shown in the image, and later the equalizeHist function of OpenCV equalizes the histogram of a grayscale image.
+**Implement a histogram equalization in a video**.
+
+Below there are two videos, the first one is the input video in grayscale and the second one is the output after histogram equalization. There isn't much to talk about in this code, first, there is a calculation of the histogram image and it is shown in the image, and later the equalizeHist function of OpenCV equalizes the histogram of a grayscale image.
 
 <iframe width="840" height="600"
 src="https://www.youtube.com/embed/L3xrARS64jE">
@@ -471,7 +474,7 @@ src="https://www.youtube.com/embed/L3xrARS64jE">
 src="https://www.youtube.com/embed/VRYlzQUkoYY">
 </iframe>
 
-Here is the code:
+Here is the code.
 
 ```
 #include <config_loader.h>
@@ -559,7 +562,9 @@ int main(int argc, char* argv[])
 
 # Question 4.2
 
-This question asks for a motionDetector based on the histogram of the image. Below is the full code.
+**Create a motionDetector "alarm" based on the histogram of the image.**
+
+Below is the full code.
 
 ```
 #include <config_loader.h>
@@ -697,7 +702,7 @@ src="https://www.youtube.com/embed/gK2wAXdiEvk">
 
 # Question 5
 
-This question asks for a Gauss Laplacian Filter, the program below was used as base.
+**Add a Gauss Laplacian filter in the based program.**
 
 ```
 
@@ -829,7 +834,9 @@ And here is the result using laplacian_gauss.
 
 # Question 6.1
 
-This question asks for a focus simulation. We use this function to create the filter.
+**Create an image focus filter.**
+
+This function was used as base to create the filter.
 
 <br />
 <div style="text-align:center;">
@@ -996,9 +1003,10 @@ And here we can see the same region but using 100 decay, creating a smooth trans
 
 # Question 6.2
 
-The Goal in this question is to use the previous program with a video, producing a tilt-shift in the frames and dropping some frames to produce miniaturization of a scene. This effect will create a scene that looks like a stop motion.
+**Use the previous program with a video, make the effect looks like a stop-motion.**
 
-Here is the full code, you can notice how similar is to the previous one except by a wait of 5ms between friends(and the video except for an image of course).
+
+Here is the full code, you can notice how similar is to the previous one except by a wait of 5ms between frames.
 
 ```
 #include <config_loader.h>
@@ -1131,8 +1139,6 @@ void blurImage() {}
 
 Below is the video showing the process.
 
-
-
 <iframe width="840" height="600"
 src="https://www.youtube.com/embed/yMU6DuOi6t8">
 </iframe>
@@ -1141,7 +1147,9 @@ src="https://www.youtube.com/embed/yMU6DuOi6t8">
 
 # Question 8 
 
-This question asks to create an image using points to make the image look like pointillism art. An example is shown below.
+**Create an image using points to make the image looks like pointillism art**
+
+An example of digital pointillism is shown below.
 
 <br />
 <div style="text-align:center;">
@@ -1152,7 +1160,6 @@ This question asks to create an image using points to make the image look like p
 <br />
 
 The code is shown below and I'm going to explain the logic and results right after.
-
 
 
 ```
@@ -1297,8 +1304,9 @@ To create a better image with circles it is asked to use the canny edge detector
 
 # Question 9 
 
-This questions asks to use Kmeans with random center and only one attemp to chang the initial center position, then repeat the Kmeans for the same image 10 times and explain the difference between images. The code is shown below.
+**Use Kmeans with random center and one attempt of change clusters 10 times, you can see that there are some differences in the output result, explain why this occurs.** 
 
+Full code.
 ```
 #include <config_loader.h>
 #include <cstdlib>
@@ -1370,7 +1378,7 @@ int main(int argc, char* argv[])
 </div>
 <br />
 
-As you can see in the output there are some difference between the image because the position of clusters being random and not being able to correct the position will create different clusters with different group of colors. This can be see comparing those two images, the first one has only one blue shade and the second one has two shades of blue, you can also see that the first image has another shade of brown/red(up corner right).
+As you can see in the output there is some difference between the image because the position of clusters being random and not being able to correct the position will create different clusters with a different group of colors. This can be see comparing those two images, the first one has only one blue shade and the second one has two shades of blue, you can also see that the first image has another shade of brown/red(up corner right).
 
 <br />
 <div style="text-align:center;">
