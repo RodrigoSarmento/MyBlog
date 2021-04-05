@@ -1297,8 +1297,6 @@ To create a better image with circles it is asked to use the canny edge detector
 
 # Question 9 
 
-– Flag to specify the number of times the algorithm is executed using different initial labellings. The algorithm returns the labels that yield the best compactness (see the last function parameter).
-
 This questions asks to use Kmeans with random center and only one attemp to chang the initial center position, then repeat the Kmeans for the same image 10 times and explain the difference between images. The code is shown below.
 
 ```
@@ -1366,8 +1364,8 @@ int main(int argc, char* argv[])
 
 <br />
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/img/pdi/kmeans.png">
-    <img src="/MyBlog/assets/img/pdi/kmeans.png" alt="example">
+  <a href="/MyBlog/assets/img/pdi/kmeans.gif">
+    <img src="/MyBlog/assets/img/pdi/kmeans.gif" alt="example">
   </a>
 </div>
 <br />
@@ -1376,8 +1374,8 @@ As you can see in the output there are some difference between the image because
 
 <br />
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/img/pdi/kmeans_collage.png">
-    <img src="/MyBlog/assets/img/pdi/kmeans_collage.png" alt="example">
+  <a href="/MyBlog/assets/img/pdi/kmeans_collage.jpg">
+    <img src="/MyBlog/assets/img/pdi/kmeans_collage.jpg" alt="example">
   </a>
 </div>
 <br />
