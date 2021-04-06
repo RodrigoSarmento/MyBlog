@@ -1143,8 +1143,6 @@ Below is the video showing the process.
 src="https://www.youtube.com/embed/yMU6DuOi6t8">
 </iframe>
 
-# Question 7
-
 # Question 8 
 
 **Create an image using points to make the image looks like pointillism art**
