@@ -2,7 +2,7 @@
 layout: post
 title: Fixing wrong pose optimization
 subtitle: A new tracker
-cover-img: /assets/img/slam_solver_test/slam_solver_aruco_optimization_final_wrong.png
+cover-img: /assets/img/slam_solver_test/slam_solver_aruco_optimization_final.png
 thumbnail-img: /assets/img/slam_solver_test/slam_solver_aruco_optimization_final_wrong.png
 share-img: /assets/img/slam_solver_test/slam_solver_aruco_optimization_final_wrong.png
 tags: [C++, Computer Vision, Aruco]
