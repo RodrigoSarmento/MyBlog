@@ -11,8 +11,8 @@ readtime: true
 
 # Update
 
-Following the previously posts <a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test/">First</a> 
-<a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test_update/">Second</a>
+Following the previously posts <a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test/">Slam Solver Introducing</a> and  
+<a href="https://rodrigosarmento.github.io/MyBlog/2021-03-14-slam_solver_test_update/">Slam Solver Updating</a>
 
 I have a new update about this project, doing some tests I noticed that the pose optimization was not exactly good, so I'm going to show what was wrong and what I had to do to fix it.
 
