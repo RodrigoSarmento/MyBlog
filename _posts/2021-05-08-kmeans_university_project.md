@@ -3,9 +3,9 @@ layout: post
 title: Simple project using KMeans + Spotify dataset
 subtitle: Clustering and Predicting a music gender
 cover-img: /assets/img/kmeans/kmeans_grouping_gender.png
-thumbnail-img: /assets/img/kmeans/kmeans_grounping_second_gender.png
+thumbnail-img: /assets/img/kmeans/kmeans_grouping_second_gender.png
 share-img: /assets/img/kmeans/kmeans_grouping_gender.png
-tags: [C++, Computer Vision, Aruco]
+tags: [IA, Python, University]
 readtime: true
 ---
 
@@ -33,7 +33,7 @@ First of all, of course, we need to look into our data and reshaping it. The tab
 </div>
 <br />
 
-and the data after cleaning, going from 32.539 inputs to 13.982 inputs
+and the data after cleaning, going from 32.539 inputs to 13.982 inputs.
 
 <br />
 <div style="text-align:center;">
@@ -53,8 +53,8 @@ The first result I'm going to show is the violin plot of all features for both c
 
 <br />
 <div style="text-align:center;">
-  <a href="/MyBlog/assets/img/kmeans/kmeans_grounping_gender.png">
-    <img src="/MyBlog/assets/img/kmeans/kmeans_grounping_gender.png" alt="example">
+  <a href="/MyBlog/assets/img/kmeans/kmeans_grouping_gender.png">
+    <img src="/MyBlog/assets/img/kmeans/kmeans_grouping_gender.png" alt="example">
   </a>
 </div>
 <br />
